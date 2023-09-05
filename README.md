@@ -6,7 +6,7 @@ Yeguang Hu, Daniela Salgado Figueroa et al., A multiscale 3D chromatin architect
 
 Here is the link of various utility scripts used in the paper:
 
-Aggregate peak analysis (APA)
+## Aggregate peak analysis (APA)
 ==============================
 
 Aggregate region analysis (ARA)
