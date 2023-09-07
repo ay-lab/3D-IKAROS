@@ -1,8 +1,6 @@
 # Step-by-step execution
-=====================================
 
 ## 1. Compartment domains
-=====================================
 
 Define compartment domains diven a set of subcompartments.
 
@@ -23,7 +21,6 @@ Options:
 
 
 ## 2.1 Intra- or inter-compartmental interactions
-==============
 
 Classify interactions into intra- or inter-compartmental interactions
 
@@ -57,7 +54,6 @@ Options:
 
 
 ## 2.2 Compartmental change at loop anchors
-==============
 
 Compute the change of PC values of compartments overlapping loop anchors from differential interactions
 
