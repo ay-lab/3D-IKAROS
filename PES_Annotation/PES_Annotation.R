@@ -2,7 +2,7 @@
 
 #===========================================================
 # R script for annotating anchors into promoters (P), 
-# enhancer (E) and structural (S) given a set of interactions
+# enhancer (E) and structural (S).
 
 # Usage:
 #	Rscript PES_Annotation.R --loops loop_file.txt --genes genes_file.gtf --ctcf ctcf_peaks.txt --h3K27ac h3K27ac_peaks.txt --h3k4me1 h3k4me1_peaks.txt --slack 0 --outfile loops_PES_Annotated.pdf
@@ -210,7 +210,7 @@ option_list = list(
 	make_option(c("-l", "--loops"), default=NA, type='character', help='Loop file with "chr1 \t start1 \t end1 \t chr2 \t start2 \t end2" format'),
 	make_option(c("-g", "--genes"), default=NA, type='character', help='GTF annotation file with "chr \t TSS start \t TSS end \t" format'),
 	make_option(c("-c", "--ctcf"), default=NA, type='character', help='CTCF Peak file with "chr \t start \t end \t" format'),
-	make_option(c("-a", "--h3K27ac"), default=NA, type='character', help='H3K27ac Peak file with "chr \t start \t end \t" format'),
+	make_option(c("-a", "--h3k27ac"), default=NA, type='character', help='H3K27ac Peak file with "chr \t start \t end \t" format'),
 	make_option(c("-m", "--h3k4me1"), default=NA, type='character', help='H3K4me1 Peak file with "chr \t start \t end \t" format'),
 	make_option(c("-s", "--slack"), default=NA, type='numeric', help='bp of shift allowed for overlap'),
 	make_option(c("-o", "--outfile"), default=NA, type='character', help='Name of output file')
@@ -221,8 +221,8 @@ opt <- parse_args(opt_parser)
 LoopData <- as.data.frame(read_delim(opt$loops, "\t", col_name=TRUE))
 RefGTFData <- fread(opt$genes, header=T)
 CTCF_PeakData <- unique(fread(opt$ctcf, header=F)[, 1:3])
-H3K27AC_PeakData <- unique(fread(opt$h3K27ac, header=F)[, 1:3])
-H3K4me1_PeakData <- unique(fread(opt$h3K27ac, header=F)[, 1:3])
+H3K27AC_PeakData <- unique(fread(opt$h3k27ac, header=F)[, 1:3])
+H3K4me1_PeakData <- unique(fread(opt$h3k4me1, header=F)[, 1:3])
 slack <- opt$slack
 outFile <- opt$outfile
 

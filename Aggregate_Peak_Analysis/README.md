@@ -1,9 +1,9 @@
 Aggregate Peak Analysis (APA)
 =============================
 
-Aggregate enrichment of a set of interactions in a contact matrix
+Compute aggregate enrichment of a set of interactions in a contact matrix
 
-Defines in the paper:
+Defined in the paper:
 Rao et. al., A 3D Map of the Human Genome at Kilobase Resolution Reveals Principles of Chromatin Looping, Cell 2014.
 
 Usage: APA_GENOVA.R [options]
@@ -25,3 +25,6 @@ Options:
 	--max_lim
 		Upper limit of color scale
 	
+	--outfile
+		Output filename
+

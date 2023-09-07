@@ -1,8 +1,8 @@
 #!/usr/bin/env Rscript
 
 #===========================================================
-# R script for defining compartment domains 
-# diven a set of subcompartments 
+# R script for classifying interactions into
+# intra- or inter-compartmental interactions
 
 # Usage:
 #	Rscript Overlap_CompartmentDomains_Loops.R --domain_cond1 Condition1_CompartmentDomains.bed --domain_cond2 Condition2_CompartmentDomains.bed --cond1 Condition1 --cond2 Condition2 --up_loops upregulated_loop_file.txt --down_loops downregulated_loop_file.txt --outdir results/

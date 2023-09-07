@@ -12,14 +12,17 @@ library(foreach)
 options(scipen=999)
 
 #===============
-# Read dcHiC output
+# parameters - users need to edit them
 #===============
 
-# Differential compartments across WT, day 0, day 4, day 12 and day 18 after IKAROS induction, and IKDN
+# dcHiC "intra_compartment.bedGraph" output file
+## Differential compartments across WT, day 0, day 4, day 12 and day 18 after IKAROS induction, and IKDN
 comp_induc_all <- read.delim("../Data/dcHiC_WT_IKDN_INDUC_compartments.bedGraph")
 
-# Differential compartments across day 0 and day 18 after IKAROS induction and IKDN
+## Differential compartments across day 0 and day 18 after IKAROS induction and IKDN
 comp_induc_d18 <- read.delim("../Data/dcHiC_IKDN_INDUC_D0_D18_compartments.bedGraph")
+
+#===============
 
 # Annotate compartment switches
 comp_induc_d18$annotation <- ""

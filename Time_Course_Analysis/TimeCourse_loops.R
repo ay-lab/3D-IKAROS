@@ -8,7 +8,19 @@
 # Wu M, Gu L (2021). TCseq: Time course sequencing data analysis. R package version 1.18.0.
 #===========================================================
 
-#================================================
+#===============
+# parameters - users need to edit them
+#===============
+
+k27ac_up <- read.delim("Data/Upregulated_EdgeR_glmQLFTest_H3K27ac_loops.txt")
+k27ac_down <- read.delim("Data/Downregulated_EdgeR_glmQLFTest_H3K27ac_loops.txt")
+
+ctcf_up <- read.delim("Data/Upregulated_EdgeR_glmQLFTest_CTCF_loops.txt")
+ctcf_down <- read.delim("Data/Downregulated_EdgeR_glmQLFTest_CTCF_loops.txt")
+
+outDir <- "./" # Output directory
+
+#========== Important functions =================
 clust <- methods::setClass("clust", slots = c(method = "character",
 				dist = "character",
 				data = "matrix",
@@ -277,18 +289,6 @@ pcaclustplot <- function(object = NULL, categories = "timepoint",
 }
 
 #================================================
-
-#===============
-# Read loop files
-#===============
-
-k27ac_up <- read.delim("Data/Upregulated_EdgeR_glmQLFTest_H3K27ac_loops.txt")
-k27ac_down <- read.delim("Data/Downregulated_EdgeR_glmQLFTest_H3K27ac_loops.txt")
-
-ctcf_up <- read.delim("Data/Upregulated_EdgeR_glmQLFTest_CTCF_loops.txt")
-ctcf_down <- read.delim("Data/Downregulated_EdgeR_glmQLFTest_CTCF_loops.txt")
-
-outDir <- "./"
 
 #===============
 # Cluster loops based on 
